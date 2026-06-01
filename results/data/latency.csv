@@ -1,0 +1,10 @@
+implementation,iterations,time_ns,latency_ns
+std_sync,100000,,8.54
+parking_lot,100000,,11.27
+thread_sentry,100000,,9312.39
+std_sync,100000,,8.74
+parking_lot,100000,,9.39
+thread_sentry,100000,,9295.53
+std_sync,100000,,7.22
+parking_lot,100000,,7.65
+thread_sentry,100000,,9338.50

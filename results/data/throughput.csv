@@ -1,0 +1,10 @@
+implementation,threads,operations,time_ns,ops_per_sec
+std_sync,1,,67476383.26585695,
+parking_lot,1,,78100593.56451109,
+thread_sentry,1,,111772.45631597089,
+std_sync,2,,43088590.14133058,
+parking_lot,2,,57517542.85056942,
+thread_sentry,2,,164311.69665957606,
+std_sync,4,,14112533.340860019,
+parking_lot,4,,17362618.282837052,
+thread_sentry,4,,102595.74414386057,

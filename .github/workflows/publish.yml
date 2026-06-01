@@ -1,0 +1,30 @@
+name: Publish to crates.io
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+
+      - name: Run tests
+        run: cargo test --all-features
+
+      - name: Check package
+        run: cargo package --list
+
+      - name: Publish to crates.io
+        run: cargo publish --token ${{ secrets.CARGO_API_TOKEN }}
+
+      - name: Verify publication
+        run: cargo info thread-sentry
